@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>ws_server</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    var wsServer = 'ws://www.13sui.cn:10080';
+    var websocket = new WebSocket(wsServer);
+    websocket.onopen = function (evt) {
+        console.log("Connected to WebSocket server.");
+    };
+
+    websocket.onclose = function (evt) {
+        console.log("Disconnected");
+    };
+
+    websocket.onmessage = function (evt) {
+        console.log('Retrieved data from server: ' + evt.data);
+    };
+
+    websocket.onerror = function (evt, e) {
+        console.log('Error occured: ' + evt.data);
+    };
+</script>
+</html>
