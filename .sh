@@ -6,3 +6,7 @@ cd /fff/html/swoole
 git pull origin master
 
 echo $(date "+%Y%m%d%H%M%S") >> /fff/log/time_end.log
+
+php /fff/html/swoole/http_server.php
+
+echo $(date "+%Y%m%d%H%M%S") >> /fff/log/time_php.log
