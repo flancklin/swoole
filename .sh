@@ -9,6 +9,8 @@ chmod -R 777 /fff/html
 
 echo $(date "+%Y-%m-%d %H:%M:%S") >> /fff/log/time_end.log
 
+php /fff/html/swoole/http_server.php
+
 php /fff/html/swoole/ws_server.php
 
 echo $(date "+%Y-%m-%d %H:%M:%S") >> /fff/log/time_php.log
